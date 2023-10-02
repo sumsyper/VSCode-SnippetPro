@@ -1,0 +1,59 @@
+{
+	"name": "SnippetPro",
+	"displayName": "Snippet Pro",
+	"description": "Creates snippets from selection",
+	"version": "1.0.0",
+	"icon": "img/icon.png",
+	"publisher": "VSYPER",
+	"author": {
+		"name": "Andy Bulka",
+		"url": "https://github.com/abulka",
+		"email": "abulka@gmail.com"
+	},
+	"homepage": "https://github.com/VSYPER/VSCode-SnippetPro-Extension",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/VSYPER/VSCode-SnippetPro-Extension"
+	},
+	"bugs": {
+		"url": "https://github.com/VSYPER/VSCode-SnippetPro-Extension/issues"
+	},
+	"keywords": [
+		"snippet",
+		"creation"
+	],
+	"engines": {
+		"vscode": "^1.30.0"
+	},
+	"categories": [
+		"Snippets",
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.createSnippet"
+	],
+	"main": "./src/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.createSnippet",
+				"title": "Create Snippet"
+			}
+		]
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"dependencies": {
+		"jsonc-parser": "^2.0.3",
+		"string-dedent": "^1.1.1"
+	},
+	"devDependencies": {
+		"@types/mocha": "^2.2.42",
+		"@types/node": "^8.10.25",
+		"eslint": "^4.11.0",
+		"typescript": "^3.1.4",
+		"vscode": "^1.1.25"
+	}
+}
